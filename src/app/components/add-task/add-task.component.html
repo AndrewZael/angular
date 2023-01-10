@@ -1,0 +1,3 @@
+<label for="input-task">Tarea</label><br>
+<input #inputTask [(ngModel)]="task" id="input-task" type="text" placeholder="Ej: Estudiar JS" />
+<button (click)="addTask(); inputTask.value = ''" [disabled]="task === ''">Guardar tarea</button>

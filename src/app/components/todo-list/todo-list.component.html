@@ -1,8 +1,4 @@
-<!-- Meter esto en otro componente y que siga funcionando todo -->
-<label for="input-task">Tarea</label><br>
-<input #inputTask [(ngModel)]="task" id="input-task" type="text" placeholder="Ej: Estudiar JS" />
-<button (click)="addTask(); inputTask.value = ''" [disabled]="task === ''">Guardar tarea</button>
-<!-- Meter esto en otro componente y que siga funcionando todo -->
+<app-add-task (outputTasks)="addTaskToList($event)"></app-add-task>
 
 <ul>
   <li *ngFor="let tarea of tasks; let i = index"

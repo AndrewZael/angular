@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import { TaskInterface } from 'src/app/interfaces/task.interface';
 
 @Component({
   selector: 'app-todo-list',
@@ -18,18 +19,9 @@ export class TodoListComponent implements OnInit {
     this.tasks = [];
   }
 
-  // Agrega una tarea
-  addTask() {
-    this.tasks.push(
-      {
-        id: this.id++,
-        task: this.task,
-        complete: false
-      }
-    );
-    this.task = '';
+  addTaskToList(task: TaskInterface) {
+    this.tasks.push(task);
   }
-  // Agrega una tarea
 
   // Marca una tarea como completada
   completeTask(index: number) {
@@ -40,10 +32,4 @@ export class TodoListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-}
-
-export interface TaskInterface {
-  id: number,
-  task: string,
-  complete: boolean
 }
