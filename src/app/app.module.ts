@@ -6,13 +6,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import { SelectElementsComponent } from './components/select-elements/select-elements.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TodoListComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    SelectElementsComponent
   ],
   imports: [
     BrowserModule,

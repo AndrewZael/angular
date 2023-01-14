@@ -1,0 +1,13 @@
+.box{
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-active{
+    background-color: red;
+    color: white;
+}
