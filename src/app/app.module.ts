@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { SelectElementsComponent } from './components/select-elements/select-elements.component';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { SelectElementsComponent } from './components/select-elements/select-ele
     HeaderComponent,
     TodoListComponent,
     AddTaskComponent,
-    SelectElementsComponent
+    SelectElementsComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

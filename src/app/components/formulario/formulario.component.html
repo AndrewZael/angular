@@ -1,0 +1,22 @@
+<form [formGroup]="formulario">
+
+    <label for="name">Nombre</label><br/>
+    <input formControlName="name" id="name" placeholder="Nombre" required /><br/>
+    
+    <small *ngIf="!formulario.controls['name'].valid && formulario.controls['name'].touched; else correct">
+        Campo obligatorio
+    </small>
+    <ng-template #correct>
+        <small>Campo correcto</small>
+    </ng-template>
+    <br/><br/>
+
+    <label for="email">Correo</label><br/>
+    <input formControlName="email" id="email" placeholder="Nombre" type="email" required /><br/><br/>
+
+    <label for="phone">Teléfono</label><br/>
+    <input formControlName="phone" id="phone" placeholder="Nombre" type="tel" required /><br/><br/>
+
+    <button type="submit" (click)="sendForm()">Enviar</button>
+
+</form>
