@@ -8,6 +8,8 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { SelectElementsComponent } from './components/select-elements/select-elements.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { ApiComponent } from './components/api/api.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     TodoListComponent,
     AddTaskComponent,
     SelectElementsComponent,
-    FormularioComponent
+    FormularioComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

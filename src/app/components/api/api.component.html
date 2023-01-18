@@ -1,0 +1,14 @@
+<main class="p-3">
+
+    <button [disabled]="preload" class="btn btn-primary" (click)="getCharacter()">
+        Mostrar personajes
+    </button>
+
+    <h2 *ngIf="preload" class="text-center">Cargando personajes. Por favor espere...</h2>
+    <ul *ngIf="!preload" class="container mx-auto list-unsltyled m-0 p-0 d-flex flex-wrap justify-content-center gap-3">
+        <li *ngFor="let personaje of personajes" class="border rounded d-flex flex-column justify-content-between align-items-center justify-content-center p-3">
+            <img [src]="personaje.image" [alt]="personaje.character" width="220" />
+            <h2>{{ personaje.character }}</h2>
+        </li>
+    </ul>
+</main>
