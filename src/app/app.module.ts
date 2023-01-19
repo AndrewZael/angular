@@ -10,6 +10,11 @@ import { SelectElementsComponent } from './components/select-elements/select-ele
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { ApiComponent } from './components/api/api.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './pages/home/home.component';
+import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { RoutingModule } from './modules/routing/routing.module';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +24,18 @@ import { HttpClientModule } from '@angular/common/http';
     AddTaskComponent,
     SelectElementsComponent,
     FormularioComponent,
-    ApiComponent
+    ApiComponent,
+    HomeComponent,
+    ServiciosComponent,
+    ContactoComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

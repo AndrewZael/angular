@@ -7,4 +7,16 @@
 
 <!--app-formulario></app-formulario-->
 
-<app-api></app-api>
+<!--app-api></app-api-->
+
+<nav>
+    <a class="btn rounded-0" routerLink="home" routerLinkActive="link-active">
+        <span class="material-symbols-outlined">home</span>
+    </a>
+    <a class="btn rounded-0" routerLink="servicios" routerLinkActive="link-active">Servicios</a>
+    <a class="btn rounded-0" routerLink="contacto" routerLinkActive="link-active">Contacto</a>
+</nav>
+
+<main class="d-flex justify-content-center h-100">
+    <router-outlet></router-outlet>
+</main>
