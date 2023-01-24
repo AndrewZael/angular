@@ -9,7 +9,7 @@
 
 <!--app-api></app-api-->
 
-<nav>
+<!--nav>
     <a class="btn rounded-0" routerLink="home" routerLinkActive="link-active">
         <span class="material-symbols-outlined">home</span>
     </a>
@@ -19,4 +19,16 @@
 
 <main class="d-flex justify-content-center h-100">
     <router-outlet></router-outlet>
-</main>
+</main-->
+
+<h1>{{ title | uppercase }}</h1>
+
+<h1>${{ num | number: '1.0-0' : 'es' }}</h1>
+
+<h1>{{ title | rerverse }}</h1>
+
+<h1>{{ num | sum: 100 }}</h1>
+
+<h1 [innerHTML]="title | capitalize"></h1>
+
+<h1>{{ hoy | date: 'dd/MM/yyyy' }}</h1>

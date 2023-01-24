@@ -15,6 +15,7 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { RoutingModule } from './modules/routing/routing.module';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { CapitalizePipe, PipeUppercase, ReverseTextPipe, SumPipe } from './pipes/pipes/pipes.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,11 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     HomeComponent,
     ServiciosComponent,
     ContactoComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    PipeUppercase,
+    ReverseTextPipe,
+    SumPipe,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
