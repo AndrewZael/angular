@@ -21,14 +21,58 @@
     <router-outlet></router-outlet>
 </main-->
 
-<h1>{{ title | uppercase }}</h1>
-
+<!-- PIPES -->
+<!--h1>{{ title | uppercase }}</h1>
 <h1>${{ num | number: '1.0-0' : 'es' }}</h1>
-
 <h1>{{ title | rerverse }}</h1>
-
 <h1>{{ num | sum: 100 }}</h1>
-
 <h1 [innerHTML]="title | capitalize"></h1>
+<h1>{{ hoy | date: 'dd/MM/yyyy' }}</h1-->
+<!-- PIPES -->
 
-<h1>{{ hoy | date: 'dd/MM/yyyy' }}</h1>
+<main class="p-3">
+
+    <!--app-content title="Nuevo titulo componente">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quibusdam eligendi odit modi autem voluptatum ab, enim voluptates deserunt provident odio impedit et, commodi similique at iusto pariatur maiores debitis iste! Maiores, quo consectetur. Corporis optio eos laudantium doloremque veniam neque delectus dolore quibusdam deserunt enim maxime nihil quis recusandae corrupti autem unde iusto quos est molestias, ducimus velit nam quam. Impedit sit dolorum quos omnis laborum eius nesciunt exercitationem, eligendi rerum numquam? Eum accusamus, labore soluta culpa incidunt aut alias omnis explicabo quos natus facere deleniti reprehenderit laudantium quis? Ducimus eligendi eum sapiente mollitia? Voluptate omnis totam excepturi! Ducimus.
+    </app-content>
+
+    <app-content title="Bosque">
+        <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41477-019-0374-3/MediaObjects/41477_2019_374_Figa_HTML.jpg" width="300" />
+    </app-content>
+
+    <app-content>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium vero ipsam amet, est dolore iusto consectetur laborum doloribus voluptate fuga.</p>
+        <input placeholder="Text" />
+    </app-content-->
+
+    <ul>
+        <li *ngFor="let item of data" [ngClass]="item.title === 'Titulo 1' ? 'title-1' : item.title === 'Titulo 2' ? 'title-2' : 'title'">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.body }}</p>
+        </li>
+    </ul>
+
+    <!--ng-container *ngFor="let item of data">
+        <ng-container *ngTemplateOutlet="card; context: {
+            title: item.title,
+            body: item.body
+        }"></ng-container>
+    </ng-container-->
+
+    <!--ng-container *ngIf="false">
+        <h1>Tiulo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed facilis eaque voluptates animi, praesentium possimus sit similique soluta exercitationem consectetur?</p>
+    </ng-container-->
+    
+</main>
+
+<ng-template #card let-title="title" let-body="body">
+    <div class="card mb-3" style="width: 200px;">
+        <header class="title-card px-2">
+            <h2 class="mb-2">{{ title }}</h2>
+        </header>
+        <div class="card-body">
+            {{ body }}
+        </div>
+    </div>
+</ng-template>

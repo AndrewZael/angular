@@ -17,6 +17,7 @@ export class ApiComponent implements OnInit {
     this.preload = true;
     this.http.getData('https://thesimpsonsquoteapi.glitch.me/quotes?count=10').subscribe((respuestaAPI: Array<CharacterInterface>) => {
       this.personajes = respuestaAPI;
+      console.log(this.personajes);
       this.preload = false;
     });
   }

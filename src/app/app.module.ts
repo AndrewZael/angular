@@ -16,6 +16,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { RoutingModule } from './modules/routing/routing.module';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { CapitalizePipe, PipeUppercase, ReverseTextPipe, SumPipe } from './pipes/pipes/pipes.pipe';
+import { ContentComponent } from './components/content/content.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CapitalizePipe, PipeUppercase, ReverseTextPipe, SumPipe } from './pipes
     PipeUppercase,
     ReverseTextPipe,
     SumPipe,
-    CapitalizePipe
+    CapitalizePipe,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
